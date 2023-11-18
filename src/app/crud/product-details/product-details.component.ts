@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CRUDService } from 'src/app/services/crud.service';
 
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss']
 })
-export class ProductDetailsComponent {
+export class ProductDetailsComponent implements OnInit{
+
+  constructor(private crudService: CRUDService){}
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
 }

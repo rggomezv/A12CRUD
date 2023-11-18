@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
+import { CRUDService } from 'src/app/services/crud.service';
 
 @Component({
   selector: 'app-product-list',
@@ -19,7 +20,8 @@ rowData = [
     { make: 'Ford', model: 'Mondeo', price: 32000 },
     { make: 'Porsche', model: 'Boxster', price: 72000 }
 ];
-  constructor(){}
+  constructor(private crudService: CRUDService){}
+
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
